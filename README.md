@@ -11,8 +11,11 @@
 ## 📂 Repository Structure
 
 server-infra-workspace/
+
 ├── web/          # React 프론트엔드 앱 및 Docker 컨테이너 / Nginx 설정
+
 ├── monitor/      # 시스템 상태 헬스체크 및 Telegram Bot 실시간 알림 스크립트
+
 └── backup/       # 주기적 데이터 백업 및 system cron 자동화 스크립트
 
 🚀 Core Modules & Engineering Implementation
