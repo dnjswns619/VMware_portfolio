@@ -1,0 +1,301 @@
+.port {
+  overflow: hidden;
+  &__wrap {
+    @include flexCol-center;
+    gap: 7vw;
+    padding: 5vw 0;
+    width: 100%;
+  }
+  &__title {
+    @include flex-center;
+    height: 100vh;
+    font-family: var(--font-iropke);
+    font-size: 14vw;
+  }
+  &__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 7vw;
+    &:nth-child(1 of .port__item) {
+      .imgBox__front {
+        h3 {
+          --after-width1: 100%;
+          &::after {
+            width: var(--after-width1);
+          }
+        }
+      }
+      .projectDesc {
+        --textColor-progress1: 0%;
+        &__title {
+          background: linear-gradient(90deg, #1b6856 var(--textColor-progress1), transparent 0%);
+          background-size: cover;
+          background-clip: text;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+      }
+    }
+    &:nth-child(2 of .port__item) {
+      .imgBox__front {
+        background-color: rgb(67, 144, 100);
+        h3 {
+          --after-width2: 100%;
+          &::after {
+            left: 0;
+            width: var(--after-width2);
+            background-color: rgb(67, 144, 100);
+          }
+        }
+      }
+      .projectDesc {
+        --textColor-progress2: 0%;
+        &__title {
+          background: linear-gradient(270deg, rgb(67, 144, 100) var(--textColor-progress2), transparent 0%);
+          background-size: cover;
+          background-clip: text;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+      }
+    }
+    &:nth-child(3 of .port__item) {
+      .imgBox__front {
+        background-color: rgb(85, 158, 97);
+        h3 {
+          --after-width3: 100%;
+          &::after {
+            width: var(--after-width3);
+            background-color: rgb(85, 158, 97);
+          }
+        }
+      }
+      .projectDesc {
+        --textColor-progress3: 0%;
+        &__title {
+          background: linear-gradient(90deg, rgb(85, 158, 97) var(--textColor-progress3), transparent 0%);
+          background-size: cover;
+          background-clip: text;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+      }
+    }
+    &:nth-child(4 of .port__item) {
+      .imgBox__front {
+        background-color: rgb(137, 204, 140);
+        h3 {
+          --after-width4: 100%;
+          &::after {
+            left: 0;
+            width: var(--after-width4);
+            background-color: rgb(137, 204, 140);
+          }
+        }
+      }
+      .projectDesc {
+        --textColor-progress4: 0%;
+        &__title {
+          background: linear-gradient(270deg, rgb(137, 204, 140) var(--textColor-progress4), transparent 0%);
+          background-size: cover;
+          background-clip: text;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+      }
+    }
+    &:nth-child(5 of .port__item) {
+      .imgBox__front {
+        h3 {
+          --after-width5: 100%;
+          &::after {
+            width: var(--after-width5);
+          }
+        }
+      }
+      .projectDesc {
+        --textColor-progress5: 0%;
+        &__title {
+          background: linear-gradient(90deg, #1b6856 var(--textColor-progress5), transparent 0%);
+          background-size: cover;
+          background-clip: text;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+      }
+    }
+    &:nth-child(6 of .port__item) {
+      .imgBox__front {
+        background-color: rgb(67, 144, 100);
+        h3 {
+          --after-width6: 100%;
+          &::after {
+            left: 0;
+            width: var(--after-width6);
+            background-color: rgb(67, 144, 100);
+          }
+        }
+      }
+      .projectDesc {
+        --textColor-progress6: 0%;
+        &__title {
+          background: linear-gradient(270deg, rgb(67, 144, 100) var(--textColor-progress6), transparent 0%);
+          background-size: cover;
+          background-clip: text;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+      }
+    }
+    &:nth-child(7 of .port__item) {
+      .imgBox__front {
+        background-color: rgb(85, 158, 97);
+        h3 {
+          --after-width7: 100%;
+          &::after {
+            width: var(--after-width7);
+            background-color: rgb(85, 158, 97);
+          }
+        }
+      }
+      .projectDesc {
+        --textColor-progress7: 0%;
+        &__title {
+          background: linear-gradient(90deg, rgb(85, 158, 97) var(--textColor-progress7), transparent 0%);
+          background-size: cover;
+          background-clip: text;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+      }
+    }
+    &:nth-child(8 of .port__item) {
+      .imgBox__front {
+        background-color: rgb(137, 204, 140);
+        h3 {
+          --after-width8: 100%;
+          &::after {
+            left: 0;
+            width: var(--after-width8);
+            background-color: rgb(137, 204, 140);
+          }
+        }
+      }
+      .projectDesc {
+        --textColor-progress8: 0%;
+        &__title {
+          background: linear-gradient(270deg, rgb(137, 204, 140) var(--textColor-progress8), transparent 0%);
+          background-size: cover;
+          background-clip: text;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+      }
+    }
+    &--img {
+      position: relative;
+      flex-shrink: 0;
+      width: 35vw;
+      height: 20vw;
+      padding: 4px;
+      border-radius: 20px;
+    }
+    .imgBox {
+      &__left { transform: rotate(-10deg); }
+      &__right { transform: rotate(10deg); }
+      &:hover {
+        .imgBox__front {
+          transform: rotateY(180deg);
+          opacity: 0;
+        }
+        .imgBox__behind {
+          transform: rotateY(0);
+          opacity: 1;
+        }
+      }
+      &__item {
+        position: absolute; top: 0; left: 0;
+      }
+      &__front {
+        opacity: 1;
+        transform: rotateY(0);
+        transition: all 1s ease-in-out;
+        width: 100%;
+        height: 100%;
+        padding: 5px;
+        background-color: rgb(27, 104, 86);
+        border-radius: 16px;
+        h3 {
+          @include flexCol-center;
+          position: relative;
+          width: 100%;
+          height: 100%;
+          border: 2px solid var(--mainBg-color);
+          border-radius: 11px;
+          font-family: var(--font-caorgen);
+          font-size: 3vw;
+          color: var(--mainBg-color);
+          span {
+            font-size: 2vw;
+          }
+          &::after{
+            content: "";
+            top: 50%;
+            right: 0;
+            transform: translateY(-50%);
+            position: absolute;
+            height: 60px;
+            background-color: rgb(27, 104, 86);
+          }
+        }
+      }
+      &__behind {
+        opacity: 0;
+        overflow: hidden;
+        transform: rotateY(180deg);
+        transition: all 1s ease-in-out;
+        width: 100%;
+        height: 100%;
+        padding: 5px;
+        border-radius: 16px;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+        }
+      }
+    }
+  }
+}
+// 태블릿 반응형
+@media screen and (max-width: 1024px) {
+  .port {
+    &__item {
+      gap: 2vw;
+    }
+  }
+}
+// 모바일 반응형
+@media screen and (max-width: 900px) {
+  .port {
+    &__item {
+      flex-direction: column;
+      gap: 4vw;
+      padding: 0 5vw;
+      &:not(:last-child) { margin-bottom: 5vw; }
+      &--img {
+        width: 75vw;
+        height: 40vw;
+      }
+      &--2 { flex-direction: column-reverse; }
+      &--4 { flex-direction: column-reverse; }
+      &--6 { flex-direction: column-reverse; }
+      .imgBox {
+        &__front {
+          h3 { font-size: 8vw; }
+        }
+      }
+    }
+  }
+}

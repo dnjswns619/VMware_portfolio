@@ -1,0 +1,231 @@
+.about {
+  height: 400vh;
+  &__sticky {
+    @include position-sticky;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+  }
+  &__wrap {
+    display: flex;
+    width: auto;
+    height: 100%;
+    font-family: var(--font-iropke);
+    & > * { flex-shrink: 0; }
+  }
+  &__title {
+    @include flex-center;
+    width: 100vw;
+    height: 100vh;
+    font-size: min(10vw, 15vh);
+    color: #fff;
+  }
+  &__desc {
+    display: flex;
+    &--item {
+      @include flex-center;
+      position: relative;
+      width: 100vw;
+    }
+    .item {
+      &__main-num { 
+        font-size: min(7vw, 15vh);
+        color: #e65100;
+        &--sub {
+          font-size: min(3vw, 11vh);
+        }
+      }
+      &__main-keyword {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: min(2vw, 9vh);
+        font-family: var(--font-jua);
+        &--text { font-size: min(1.5vw, 8.5vh); }
+      }
+      &__sub-text {
+        position: absolute;
+        top: 25vh;
+        left: 21vw;
+        font-family: var(--font-jua);
+        font-size: min(1.2vw, 8.2vh);
+      }
+    }
+    .item1 {
+      &__img-box {
+        overflow: hidden;
+        position: absolute;
+        background-color: #fff;
+        border-radius: 100%;
+        &.bgNone { background-color: transparent; }
+        &--1 {
+          top: 28vh;
+          left: -15vw;
+          width: min(18vw, 18vh);
+          height: min(18vw, 18vh);
+        }
+        &--2 {
+          left: 32vw;
+          bottom: 20vh;
+          width: min(9vw, 9vh);
+          height: min(9vw, 9vh);
+          
+        }
+        &--3 {
+          top: 25vh;
+          left: 63vw;
+          width: min(14vw, 14vh);
+          height: min(14vw, 14vh);
+        }
+        &--4 {
+          left: 59vw;
+          bottom: 3vh;
+          width: min(18vw, 18vh);
+          height: min(18vw, 18vh);
+        }
+        &--img {
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+        }
+      }
+    }
+    .item2 {
+      .item__sub-text {
+        &--1 { left: 47vw; }
+        &--2 { top: 70vh; left: 70vw; }
+      }
+      &__img-box {
+        overflow: hidden;
+        position: absolute;
+        border-radius: 100%;
+        &--1 {
+          top: 25vh;
+          left:5vw;
+          width: min(16vw, 16vh);
+          height: min(16vw, 16vh);
+        }
+        &--2 {
+          left: 57vw;
+          bottom: 9vh;
+          width: min(9vw, 9vh);
+          height: min(9vw, 9vh);
+        }
+        &--3 {
+          top: 20vh;
+          right: 11vw;
+          width: min(12vw, 12vh);
+          height: min(12vw, 12vh);
+        }
+        &--4 {
+          left: 10vw;
+          bottom: 8vh;
+          width: min(18vw, 18vh);
+          height: min(18vw, 18vh);
+        }
+        &--img {
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+        }
+      }
+    }
+    &--line {
+      overflow: hidden;
+      height: 100vh;
+      padding-right: 20vw;
+      writing-mode: vertical-rl;
+      .desc__line {
+        display: flex;
+        justify-content: center;
+        width: 30px;
+        white-space: noWrap;
+        font-size: 1.5rem;
+        em {
+          display: inline-block;
+          margin: 5px 0;
+          color: #e65100;
+        }
+        &--right {
+          transform: rotateY(-180deg);
+        }
+      }
+    }
+  }
+}
+@media screen and (min-width: 1025px) and (max-width: 1300px) {
+  .about {
+    &__title { font-size: min(14vw, 14vh); }
+    &__desc {
+      .item {
+        &__main-num { 
+          font-size: min(14vw, 14vh);
+          &--sub {
+            font-size: min(6vw, 6vh);
+          }
+        }
+        &__main-keyword {
+          &--text { font-size: min(2vw, 2vh); }
+        }
+        &__sub-text {
+          font-size: min(1.7vw, 1.7vh);
+        }
+      }
+    }
+  }
+}
+// 테블릿 반응형
+@media screen and (min-width: 751px) and (max-width: 1024px) {
+  .about {
+    &__title { font-size: min(16vw, 16vh); }
+    &__desc {
+      .item {
+        &__main-num { 
+          font-size: min(16vw, 16vh);
+          &--sub {
+            font-size: min(8vw, 8vh);
+          }
+        }
+        &__main-keyword {
+          &--text { font-size: min(2.5vw, 2.5vh); }
+        }
+        &__sub-text {
+          font-size: min(2.2vw, 2.2vh);
+        }
+      }
+    }
+  }
+}
+// 모바일 반응형
+@media screen and (max-width: 750px) {
+  .about {
+    &__title { font-size: min(17vw, 17vh); }
+    &__desc {
+      .item {
+        &__main-num { 
+          font-size: min(19vw, 19vh);
+          &--sub {
+            font-size: min(11vw, 11vh);
+          }
+        }
+        &__main-keyword {
+          &--text {
+            max-width: 90vw;
+            font-size: min(3.5vw, 4vh);
+          }
+        }
+        &__sub-text {
+          font-size: min(3.6vw, 3.8vh);
+        }
+        &__sub-text {
+          left: 17vw;
+        }
+      }
+      .item2 {
+        .item__sub-text {
+          &--2 { left: 62vw; }
+        }
+      }
+    }
+  }
+}

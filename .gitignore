@@ -1,0 +1,6 @@
+# 인프라 및 환경 변수 파일 추가
+.env
+.env.local
+*.pem
+*.key
+docker-compose.override.yml

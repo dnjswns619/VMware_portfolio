@@ -1,0 +1,107 @@
+.work {
+  width: 100%;
+  height: max(700vh, 6650px);
+  padding: 50vh 0 0;
+  &__wrap {
+    --circle-scale: 5%;
+    clip-path: circle(var(--circle-scale) at 50% 50%);
+    @include position-sticky;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--mainBg-color);
+  }
+  &__title {
+    position: absolute;
+    font-family: var(--font-jua);
+    font-size: min(5vw, 5vh);
+    color: var(--color-point);
+    word-break: keep-all;
+    &--sci {
+      top: 20vh;
+      left: 5vw;
+    }
+    &--aidt {
+      top: 20vh;
+      right: 5vw;
+    }
+  }
+  &__img-box {
+    opacity: 0;
+    display: flex;
+    position: relative;
+    height: 100%;
+    &--section {
+      perspective: 2500px;
+      position: absolute;
+      transform: scale(0.733);
+      transform-origin: left;
+      width: 100vw;
+      height: 100%;
+      &1 {top: 0; left: 1.5%;}
+      &2 {top: 0; left: 58%;}
+      .project__title {
+        opacity: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 45vw;
+        font-family: var(--font-jua);
+        font-size: 4vw;
+        color: var(--color-point);
+      }
+    }
+    img {
+      opacity: 0;
+      position: absolute;
+      width: 45vw;
+      height: auto;
+      transition: all 0.3s ease-in;
+      transform-origin: left;
+      top: 28vh;
+      left: 12vw;
+      &:nth-of-type(1) { opacity: 1; }
+    }
+  }
+}
+@media screen and (max-width: 1240px) {
+  .work {
+    &__title {
+      font-size: min(4vw, 4vh);
+    }
+  }
+}
+// 모바일 반응형
+@media screen and (max-width: 750px) {
+  .work {
+    &__title {
+      max-width: 40vw;
+      &--sci {
+        top: 26vh;
+      }
+      &--aidt {
+        top: 67vh;
+        left: 8vw;
+        right: auto;
+      }
+    }
+    &__img-box {
+      &--section {
+        transform-origin: top center;
+        transform: scale(0.733);
+        &1 {top: 4vh; left: 41%;}
+        &2 {top: 43vh; left: 41%;}
+      }
+      img {
+        opacity: 0;
+        position: absolute;
+        width: 45vw;
+        height: auto;
+        transition: all 0.3s ease-in;
+        transform-origin: left;
+        top: 28vh;
+        left: 0;
+        &:nth-of-type(1) { opacity: 1; }
+      }
+    }
+  }
+}

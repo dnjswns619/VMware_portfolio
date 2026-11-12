@@ -1,0 +1,133 @@
+.projectDesc {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 0 0 33%;
+  text-align: center;
+  gap: 4vh;
+  &__title {
+    position: relative;
+    width: 100%;
+    font-family: var(--font-caorgen);
+    font-size: 4vw;
+    
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 5px;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background-color: var(--color-point);
+    }
+  }
+  &__skill {
+    display: flex;
+    width: 100%;
+    &--tit {
+      width:20%;
+      text-align: center;
+    }
+    &--text {
+      width: 80%;
+      text-align: left;
+      text-transform: capitalize;
+    }
+  }
+  &__desc {
+    display: flex;
+    width: 100%;
+    &--tit {
+      width:20%;
+      text-align: center;
+    }
+    &--text {
+      width: 80%;
+      text-align: left;
+    }
+  }
+  &__git-link {
+    display: flex;
+    width: 100%;
+    &--tit {
+      width:20%;
+      text-align: center;
+    }
+    &--text {
+      width: 80%;
+      text-align: left;
+    }
+  }
+}
+// 테블릿 반응형
+@media screen and (min-width: 751px) and (max-width: 1024px) {
+  .projectDesc {
+    flex: 0 0 50%;
+    &__title {
+      font-size: 7vw;
+    }
+    &__skill {
+      font-size: 14px;
+      &--tit {
+        width:35%;
+      }
+      &--text {
+        width: 75%;
+      }
+    }
+    &__desc {
+      font-size: 14px;
+      &--tit {
+        width:35%;
+      }
+      &--text {
+        width: 75%;
+      }
+    }
+    &__git-link {
+      font-size: 14px;
+      &--tit {
+        width:35%;
+      }
+      &--text {
+        width: 75%;
+      }
+    }
+  }
+}
+// 모바일 반응형
+@media screen and (max-width: 750px) {
+  .projectDesc {
+    flex: 0 0 50%;
+    &__title {
+      font-size: 8vw;
+    }
+    &__skill {
+      font-size: min(3vw, 3.5vh);
+      &--tit {
+        width: 25%;
+      }
+      &--text {
+        width: 75%;
+      }
+    }
+    &__desc {
+      font-size: min(3vw, 3.5vh);
+      &--tit {
+        width: 25%;
+      }
+      &--text {
+        width: 75%;
+      }
+    }
+    &__git-link {
+      font-size: min(3vw, 3.5vh);
+      &--tit {
+        width: 25%;
+      }
+      &--text {
+        width: 75%;
+      }
+    }
+  }
+}

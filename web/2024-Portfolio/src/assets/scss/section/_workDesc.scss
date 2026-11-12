@@ -1,0 +1,110 @@
+.workDesc {
+  background-color: var(--mainBg-color);
+  color: #000;
+  &__wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 7vw;
+  }
+  &__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 7vw;
+    padding-left: 2vw;
+    &--img {
+      position: relative;
+      width: 20vw;
+      height: 42vw;
+      padding: 4px;
+      border-radius: 20px;
+      .codeImg__wrap{
+        position: absolute;
+        width: 100%;
+        &--1 {
+          top: 30%;
+          left: -50%;
+          transform-origin: right top;
+          transform: rotate(10deg);
+        }
+        &--2 {
+          top: 6vw;
+          left: 30%;
+          transform-origin: left top;
+          transform: rotate(10deg);
+        }
+      }
+      img {
+        width: 100%;
+        height: auto;
+        transition: transform .4s;
+      }
+    }
+    .projectDesc {
+      flex: 0 0 50%;
+      &__title {
+        font-family: var(--font-jua);
+        color: var(--color-point);
+        font-size: 3.5vw;
+      }
+      &__desc {
+        &--text {
+          text-transform: initial;
+        }
+      }
+    }
+  }
+}
+// 테블릿 반응형
+@media screen and (min-width: 751px) and (max-width: 1024px) {
+  .workDesc {
+    .projectDesc {
+      &__title {
+        font-size: 5vw;
+      }
+    }
+    &__item {
+      &--img {
+        width: 21vw;
+        height: 60vw;
+        .codeImg__wrap{
+          &--1 {
+            top: 13vw;
+          }
+          &--2 {
+            top: 20vw;
+          }
+        }
+      }
+    }
+  }
+}
+// 모바일 반응형
+@media screen and (max-width: 750px) {
+  .workDesc {
+    &__wrap {
+      padding-top: 50vh;
+    }
+    .projectDesc {
+      &__title {
+        font-size: 5vw;
+      }
+    }
+    &__item {
+      flex-direction: column;
+      padding: 0 5vw;
+      &--img {
+        width: 40vw;
+        height: 75vw;
+        .codeImg__wrap{
+          &--1 {
+            top: 25%;
+          }
+          &--2 {
+            top: 7vw;
+          }
+        }
+      }
+    }
+  }
+}

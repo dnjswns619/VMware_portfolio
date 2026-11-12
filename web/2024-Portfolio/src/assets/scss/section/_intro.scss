@@ -1,0 +1,121 @@
+.intro {
+  position: relative;
+  width: 100%;
+  height: max(400vh, 1890px);
+  &__inner {
+    @include flexCol-center;
+    @include position-sticky;
+    width: 100%;
+    height: 100vh;
+    padding: 0 4.6vw;
+    overflow: hidden;
+  }
+  &__tit {
+    --circle: 100%;
+    z-index: 1;
+    @include flexCol-center;
+    @include position-center;
+    width: 100%;
+    height: 100%;
+    background-color: var(--mainBg-color);
+    clip-path: circle(var(--circle) at 50% 50%);
+    &--text {
+      position: relative;
+      font-family: var(--font-eng);
+      font-size: 15vw;
+      line-height: 1;
+      color: #222;
+      span {
+        display: block;
+        font-family: var(--font-now);
+        font-size: 7vw;
+        color: var(--color-point)
+      }
+    }
+  }
+  &__desc {
+    --scale: 60;
+    @include flexCol-center;
+    gap: 6vh;
+    transform-origin: 50% 50%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(var(--scale));
+    width: 100%;
+    height: 100%;
+    .desc__item {
+      z-index: -1;
+      display: flex;
+      align-items: center;
+      gap: 2vw;
+      color: #fff;
+      white-space: noWrap;
+      font-family: var(--font-iropke);
+      &--wrap {
+        display: flex;
+        align-items: center;
+        gap: 2vw;
+      }
+      &--top {
+        align-self: flex-start;
+        position: relative;
+        font-size: 4vw;
+        .desc__item--text.kor {
+          font-size: 3vw;
+        }
+      }
+      &--middle {
+        position: relative;
+        left: 7px;
+        justify-content: center;
+        position: relative;
+        font-size: 2.5vw;
+        .desc__item--text.kor {
+          font-size: 2vw;
+        }
+      }
+      &--bottom {
+        position: relative;
+        left: 7px;
+        justify-content: center;
+        position: relative;
+        font-size: 3vw;
+        .desc__item--text.kor {
+          font-size: 2.5vw;
+        }
+      }
+      &--img {width: 2.5vw; height: 2.5vw; border-radius: 50%; }
+    }
+  }
+  @media screen and (max-width: 550px) {
+    &__desc {
+      .desc__item {
+        &--top {
+          font-size: 6vw;
+          .desc__item--text.kor {
+            font-size: 5vw;
+          }
+        }
+        &--middle {
+          position: relative;
+          left: 7px;
+          justify-content: center;
+          position: relative;
+          font-size: 4.5vw;
+          .desc__item--text.kor {
+            font-size: 4vw;
+          }
+        }
+        &--bottom {
+          font-size: 5vw;
+          .desc__item--text.kor {
+            font-size: 5.5vw;
+          }
+        }
+        &--img {width: 4.5vw; height: 4.5vw; }
+      }
+    }
+  }
+}
+body {background-color: #000;}
